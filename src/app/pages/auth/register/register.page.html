@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row justify-content-around>
+      <ion-col col-sm-6 col-md-6 col-lg-4 col-xl-3 align-self-center>
+        <form [formGroup]="registerData" (ngSubmit)="register()">
+          <ion-item>
+            <ion-label floating>username :</ion-label>
+            <ion-input type="text" formControlName="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>email :</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>password :</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <ion-button
+            (click)="register()"
+            expand="block"
+            shape="round"
+            type="submit"
+            [disabled]="!registerData.valid"
+          >
+            Register
+          </ion-button>
+        </form>
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
