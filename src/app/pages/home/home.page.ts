@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { flush } from '@angular/core/testing';
+import { ModalController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { DataService } from './../../services/data.service';
 
@@ -17,7 +18,7 @@ export class HomePage implements OnInit {
   userName: any;
 
   private _storage: Storage | null = null;
-  constructor(private http: HttpClient, private storage: Storage, public data: DataService) {
+  constructor(private http: HttpClient, private storage: Storage, public data: DataService, private modalctrl: ModalController) {
 
 
     this.init();
