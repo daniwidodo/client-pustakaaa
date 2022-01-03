@@ -4,6 +4,7 @@ import { flush } from '@angular/core/testing';
 import { ModalController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { DataService } from './../../services/data.service';
+import { QuoteModalComponent } from './../../quote-modal/quote-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -47,6 +48,14 @@ export class HomePage implements OnInit {
       console.log(q.length);
       // if ( )
     });
+  }
+
+  async showModal(){
+    const modal =  await this.modalctrl.create({
+      component: QuoteModalComponent
+    });
+
+    return await modal.present();
   }
 
 }
