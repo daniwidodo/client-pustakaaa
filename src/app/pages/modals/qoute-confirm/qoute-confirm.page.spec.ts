@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { QuoteModalComponent } from './quote-modal.component';
+import { QouteConfirmPage } from './qoute-confirm.page';
 
-describe('QuoteModalComponent', () => {
-  let component: QuoteModalComponent;
-  let fixture: ComponentFixture<QuoteModalComponent>;
+describe('QouteConfirmPage', () => {
+  let component: QouteConfirmPage;
+  let fixture: ComponentFixture<QouteConfirmPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuoteModalComponent ],
+      declarations: [ QouteConfirmPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(QuoteModalComponent);
+    fixture = TestBed.createComponent(QouteConfirmPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

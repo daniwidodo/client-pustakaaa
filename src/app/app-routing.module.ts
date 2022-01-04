@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'books',
     loadChildren: () => import('./pages/books/books.module').then( m => m.BooksPageModule)
   },
+  {
+    path: 'qoute-confirm',
+    loadChildren: () => import('./pages/modals/qoute-confirm/qoute-confirm.module').then( m => m.QouteConfirmPageModule)
+  },
 ];
 
 @NgModule({
