@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { flush } from '@angular/core/testing';
 import { ModalController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
+import { QouteNewPage } from '../modals/qoute-new/qoute-new.page';
 import { DataService } from './../../services/data.service';
-import { QuoteModalComponent } from './../../quote-modal/quote-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -52,7 +52,7 @@ export class HomePage implements OnInit {
 
   async showModal(){
     const modal =  await this.modalctrl.create({
-      component: QuoteModalComponent
+      component: QouteNewPage
     });
 
     return await modal.present();

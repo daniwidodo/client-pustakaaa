@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>scanner</ion-title>
+    <ion-title>Input Data</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-button (click)="startScanner()" expand="block"  shape="round">
+    QR Scanner
+  </ion-button>
+
+  <form [formGroup]="bookData" (ngSubmit)="submitBook()">
+
+    <ion-item>
+      <ion-label floating>Judul Buku :</ion-label>
+      <ion-input type="text" formControlName="judulBuku"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nomer ISBN :</ion-label>
+      <ion-input type="text" formControlName="nomorIsbn"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="getSampulImage()" expand="block"  shape="round">
+      GET Sampul
+    </ion-button>
+
+    <ion-button
+            (click)="submitBook()"
+            expand="block"
+            shape="round"
+            type="submit"
+            [disabled]="!bookData.valid"
+          >
+            Kirim Data
+          </ion-button>
+
+  </form>
+
 
 </ion-content>

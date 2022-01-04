@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'qoute-confirm',
     loadChildren: () => import('./pages/modals/qoute-confirm/qoute-confirm.module').then( m => m.QouteConfirmPageModule)
+  },
+  {
+    path: 'qoute-new',
+    loadChildren: () => import('./pages/modals/qoute-new/qoute-new.module').then( m => m.QouteNewPageModule)
   },
 ];
 

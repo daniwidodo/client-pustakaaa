@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Buat Quote Baru</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="inputData" (ngSubmit)="confirmModal()">
+    <ion-item>
+      <ion-label floating>Nama Quote :</ion-label>
+      <ion-input type="text" formControlName="quote"></ion-input>
+    </ion-item>
+  </form>
+  <ion-button (click)="closeModal()" expand="block"  shape="round">
+    Close Modal
+  </ion-button>
+
+  <ion-button (click)="confirmModal()" expand="block"  shape="round" [disabled]="!inputData.valid">
+   Confirm Modal
+  </ion-button>
+
+</ion-content>
