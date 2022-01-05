@@ -52,7 +52,8 @@ export class HomePage implements OnInit {
 
   async showModal(){
     const modal =  await this.modalctrl.create({
-      component: QouteNewPage
+      component: QouteNewPage,
+      cssClass: 'my-custom-modal-css'
     });
 
     return await modal.present();

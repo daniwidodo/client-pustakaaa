@@ -19,7 +19,7 @@ export class BooksPage implements OnInit {
   }
 
   goInputData(){
-    this.router.navigate(['/scanner']);
+    this.router.navigate(['/input-book']);
   }
 
 }

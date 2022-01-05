@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -35,6 +35,10 @@ const routes: Routes = [
   {
     path: 'qoute-new',
     loadChildren: () => import('./pages/modals/qoute-new/qoute-new.module').then( m => m.QouteNewPageModule)
+  },
+  {
+    path: 'input-book',
+    loadChildren: () => import('./pages/input-book/input-book.module').then( m => m.InputBookPageModule)
   },
 ];
 

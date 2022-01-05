@@ -37,9 +37,9 @@ export class QouteNewPage implements OnInit {
   async confirmModal() {
     await this.alert
       .create({
-        header: 'Confirm Alert',
-        subHeader: 'konfirmasi',
-        message: 'Are you sure?',
+        // header: 'Konfirmasi',
+
+        message: 'Apakah anda yakin?',
         buttons: [
           {
             text: 'Not Sure',

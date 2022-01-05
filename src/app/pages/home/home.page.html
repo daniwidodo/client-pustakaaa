@@ -1,21 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
-  <p>welcome {{userName}}</p>
-  <div *ngIf="adaData">
-    <p >ada data</p>
+  <div class="navbar"></div>
+  <!--  -->
+  <div class="header">
+    <!-- <p>welcome {{userName}}</p> -->
+    <h1>Welcome</h1>
   </div>
-  <div *ngIf="tidakAdaData">
-    <p >tidak ada data!</p>
+  <!--  -->
+  <div class="content">
+
+    <ion-card>
+      <ion-card-content>
+        Awesome content
+      </ion-card-content>
+    </ion-card>
+    <div *ngIf="adaData">
+      <p>ada data</p>
+    </div>
+
+    <div *ngIf="tidakAdaData">
+      <p>tidak ada data!</p>
+    </div>
   </div>
-
-  <ion-button (click)="showModal()" expand="block"  shape="round">
-    Click me
-  </ion-button>
-
+  <!--  -->
+  <div class="button">
+    <ion-button (click)="showModal()"> Buat quote baru </ion-button>
+  </div>
 </ion-content>
